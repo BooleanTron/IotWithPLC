@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PLC Variables</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #0f172a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #e5e7eb;
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      background: #111827;
+      padding: 30px;
+      border-radius: 14px;
+      width: 360px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #38bdf8;
+    }
+
+    .values {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      flex: 1;
+      background: #020617;
+      padding: 14px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .card span {
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    .card p {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 5px 0 0;
+    }
+
+    label {
+      font-size: 13px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 4px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      border: none;
+      background: #020617;
+      color: #fff;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #38bdf8;
+      color: #020617;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h1>PLC Variables</h1>
+
+  <div class="values">
+    <div class="card">
+      <span>VarInt</span>
+      <p id="varIntValue">0</p>
+    </div>
+    <div class="card">
+      <span>VarFloat</span>
+      <p id="varFloatValue">0.0</p>
+    </div>
+  </div>
+
+  <form id="writeForm">
+    <label>Write to VarInt</label>
+    <input type="number" id="writeInt">
+
+    <label>Write to VarFloat</label>
+    <input type="number" step="any" id="writeFloat">
+
+    <button type="submit">Write</button>
+  </form>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+flask
+opcua
+supabase
+python-dateutil
